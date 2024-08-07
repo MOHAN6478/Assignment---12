@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password in firebase</title>
+
+    <!--FireBase SDK-->
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="2xl:container mx-auto">
+        <div class="w-[70%] md:w-[30%] mx-auto grid grid-cols-1 gap-1">
+            <div class="bg-pink-300 flex flex-col justify-center items-center shadow-lg rounded-lg my-36 border-2 border-blue-700">
+                <form id="form" class="p-5 space-y-2 flex flex-col justify-center ">
+                    
+                    <p class="text-white text-xl font-bold text-center">Update Password</p>
+
+                    <label for="newpass" class="text-white text-base">New Password</label>
+                    <input type="password" placeholder="Enter your New Password" id="newpass" class="text-sm rounded-sm" />
+                    <p id="newPasswordErrMsg"></p>
+            
+                    <label for="confirmpass" class="text-white text-base">Confirm Password</label>
+                    <input type="password" placeholder="Enter your Confirm Password" id="confirmpass" class="text-sm rounded-sm" />
+                    <p id="confirmPasswordErrMsg"></p>
+            
+                    <button class="text-white bg-blue-500 rounded-md hover:bg-blue-700 px-2 py-1 shadow-md">Update</button>
+            
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
